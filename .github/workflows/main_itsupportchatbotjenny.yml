@@ -51,9 +51,6 @@ jobs:
         with:
           name: node-app
           path: dist
-
-      - name: Unzip artifact for deployment
-        run: unzip release.zip
       
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
@@ -61,5 +58,5 @@ jobs:
         with:
           app-name: 'ITSupportChatBotJenny'
           slot-name: 'Production'
-          package: .
+          package: dist
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_39CA34D2884F421E95EEBBCA90D0843D }}
