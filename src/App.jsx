@@ -49,7 +49,8 @@ const App = () => {
           },
           body: JSON.stringify({
             messages: messages,
-            max_completion_tokens: 1500
+            max_completion_tokens: 2000,
+            temperature: 0.68
           })
         }
       );
