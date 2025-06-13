@@ -40,7 +40,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: dist
+          path: build
 
   deploy:
     runs-on: ubuntu-latest
@@ -54,7 +54,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: node-app
-          path: dist
+          path: build
       
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
@@ -62,5 +62,5 @@ jobs:
         with:
           app-name: 'ITSupportChatBotJenny'
           slot-name: 'Production'
-          package: dist
+          package: build
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_39CA34D2884F421E95EEBBCA90D0843D }}
