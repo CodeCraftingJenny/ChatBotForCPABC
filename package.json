@@ -12,6 +12,8 @@
   "dependencies": {
     "@azure/identity": "latest",
     "express": "^5.1.0",
+    "linkify-string": "^4.3.1",
+    "linkifyjs": "^4.3.1",
     "openai": "latest",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
