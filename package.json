@@ -1,19 +1,18 @@
 {
-  "name": "package.json",
+  "name": "chatbot-deploy",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "start": "node server.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@azure/identity": "latest",
-    "express": "^5.1.0",
-    "linkify-string": "^4.3.1",
-    "linkifyjs": "^4.3.1",
+    "express": "^4.21.2",
     "openai": "latest",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
