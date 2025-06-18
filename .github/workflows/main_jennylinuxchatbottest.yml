@@ -33,8 +33,8 @@ jobs:
           cp server.js package.json package-lock.json deploy/
 
       - name: Zip build + server files
-        run: cd deploy && zip -r ../release.zip .
-
+        run: zip -r release.zip deploy/*
+          
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
