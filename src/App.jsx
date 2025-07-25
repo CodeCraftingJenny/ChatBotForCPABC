@@ -4,6 +4,8 @@ import ChatForm from './components/ChatForm'
 import ChatMessage from './components/ChatMessage';
 import { supportManual } from './components/supportManual.js';
 
+// testing git push
+
 const App = () => {
   const [chatHistory, setChatHistory] = useState([
     {

@@ -19,10 +19,7 @@ body {
   position:fixed;
   bottom: 90px;
   right: 35px;
-  /* width: 850px; Don't use px, it is fixed, use vw or vh for height*/
-  width: 90vw;
-  height: 85vh;
-  max-width: 850px;
+  width: 850px;
   overflow: hidden;
   background: white;
   border-radius: 15px;
@@ -32,14 +29,6 @@ body {
   transform: scale(0.2);
   transform-origin: bottom right;
   transition: all 0.1s ease;
-}
-
-  /* When maximized we want it to fill the whole screen*/
-.chatbot-popup.maximized {
-  width: 100vw;
-  max-width: none;
-  height: 100vw;
-  max-height: none;
 }
 
 .chatbot-popup .chat-header {
@@ -92,9 +81,8 @@ body {
 }
 
 .chat-body {
-  /* height: 600px; moved to chat popup*/
-  /* padding: 25px 25px; use rem because it is responsive */
-  padding: 1.5rem;
+  height: 600px;
+  padding: 25px 25px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
