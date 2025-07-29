@@ -87,14 +87,18 @@ body {
   /* height: 600px; moved to chat popup*/
   /* padding: 25px 25px; use rem because it is responsive */
   padding: 1.5rem;
+  height:calc(85vh - 100px); /* adjusted height based on header/footer height */
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-bottom: 90px;
   scrollbar-width: thin;
   scrollbar-color: #a4c9fa transparent;
   scroll-behavior: smooth;
+}
+
+.chatbot-popup:not(.maximized) .chat-body {
+  padding-bottom: 6rem;
 }
 
 #chatbot-toggler {
@@ -244,6 +248,7 @@ body {
 .chatbot-popup.maximized .chat-body {
   height: calc(100vh - 160px); /* Adjust based on header/footer height */
 }
+
 .chat-header-buttons {
   display: flex;
   align-items: center;
