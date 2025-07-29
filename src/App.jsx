@@ -4,8 +4,6 @@ import ChatForm from './components/ChatForm'
 import ChatMessage from './components/ChatMessage';
 import { supportManual } from './components/supportManual.js';
 
-// testing git push
-
 const App = () => {
   const [chatHistory, setChatHistory] = useState([
     {
@@ -64,7 +62,7 @@ const App = () => {
       console.log("Azure OpenAI response:", data);
       if (!response.ok) throw new Error(data.error?.message || "Something went wrong!");
 
-      const reply = data.choices[0].message.content?.trim() || "⚠️ No reply received.";
+      const reply = data.choices[0].message.content?.trim() || "No reply received.";
       updateHistory(reply);
     } catch (err) {
       updateHistory(err.message, true);
